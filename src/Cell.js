@@ -3,9 +3,11 @@ import React, { Component } from 'react';
 export default class Cell extends Component {
     constructor(props) {
         super()
-        this.state = {color: props.value} // ...define initial state with a key of 'color' set to the 'value' prop
-      }
+        console.log(this.props)
+        this.state = {color: props.value}
+    }
 
+      
       handleOnClick = () => {
         this.setState(
             {color: '#333'}
@@ -13,7 +15,7 @@ export default class Cell extends Component {
       }
 
       render() {
-          return(
+          return (
             <div 
             className="cell" 
             style={{backgroundColor: this.state.color}}
